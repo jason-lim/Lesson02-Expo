@@ -1,21 +1,9 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, Image} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome6';
+import Movie from './components/Movie';
+import Boat from './components/Boat';
 
-const Movie = ({title, year})=> {
-    return (
-        <View>
-            <Text>
-                {title} {year}
-            </Text>
-            <Icon name="inbox" size={30} color="#B23B23" />
-            <Icon name="heart" size={30} color="#B23B23" />
-            <Icon name="skull" size={20} color="#B23B23" />
-
-        </View>
-    )
-};
-//fjdsfjhdhsk
 
 class ModuleInfo extends React.Component {
     render() {
@@ -23,6 +11,10 @@ class ModuleInfo extends React.Component {
             <View>
                 <Text>These are my modules this semester:</Text>
                 <Movie title="CSC 309" year="2021" />
+
+                <Boat title="CSC 309" year="2021" />
+                <Image source={require('./img/icon.png')} style={{width:400, height:500}}/>
+
             </View>
         )
     }
